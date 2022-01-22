@@ -173,7 +173,7 @@ export interface TxParams {
 }
 
 export enum TxStatus {
-  NAVAX = 'NAVAX',
+  NONE = 'NONE',
   INTIALIZED = 'INITIALIZED',
   SIGNED = 'SIGNED',
   PENDING = 'PENDING',

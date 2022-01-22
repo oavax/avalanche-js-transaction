@@ -116,7 +116,7 @@ class Transaction extends TransactionBase {
           };
 
     this.receipt = params && params.receipt ? params.receipt : undefined;
-    this.cxStatus = this.isCrossShard() ? TxStatus.INTIALIZED : TxStatus.NAVAX;
+    this.cxStatus = this.isCrossShard() ? TxStatus.INTIALIZED : TxStatus.NONE;
   }
 
   /**
@@ -252,7 +252,7 @@ class Transaction extends TransactionBase {
       chainId: this.chainId || 0,
       rawTransaction: this.rawTransaction || '0x',
       unsignedRawTransaction: this.unsignedRawTransaction || '0x',
-      signature: this.signature || '0x',
+      signature: this.signature || {r:'', s:'', recoveryParam:0, v:0},
     };
   }
 
